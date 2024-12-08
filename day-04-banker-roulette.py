@@ -18,6 +18,9 @@ num_names = len(names)
 random_num = random.randint(0, num_names - 1)
 payer = names[random_num]
 
+# payer = random.sample(names, 1)
+
 result = f"{payer} is going to buy the meal today!"
+# result = f"{payer[0]} is going to buy the meal today!"
 
 print(result)
