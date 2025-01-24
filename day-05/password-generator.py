@@ -10,10 +10,37 @@ symbols = ["!", "#", "$", "%", "&", "(", ")", "*", "+"]
 
 print("Welcome to PyPassword Generator!")
 nr_letters = int(input("How many letters would you like in your password?\n"))
-nr_symbols = int(input("How many symbols would you like in your password?\n"))
 nr_numbers = int(input("How many numbers would you like in your password?\n"))
+nr_symbols = int(input("How many symbols would you like in your password?\n"))
 
-easy_password = random.sample(letters, nr_letters) + random.sample(numbers, nr_numbers) + random.sample(symbols, nr_symbols)
-easy_password = "".join(map(str, easy_password))
+""" easy_password = ""
 
-print(easy_password)
+for letter in range(0, nr_letters):
+  easy_password += random.choice(letters)
+
+for number in range(0, nr_numbers):
+  easy_password += random.choice(numbers)
+
+for symbol in range(0, nr_symbols):
+  easy_password += random.choice(symbols)
+
+print(easy_password) """
+
+# hard password
+selected_letters = []
+selected_numbers = []
+selected_symbols = []
+
+for char in range(0, nr_letters):
+  selected_letters += random.choice(letters)
+for char in range(0, nr_numbers):
+  selected_letters += random.choice(numbers)
+for char in range(0, nr_symbols):
+  selected_letters += random.choice(symbols)
+
+combined_list = selected_letters + selected_numbers + selected_symbols
+random.shuffle(combined_list)
+
+hard_password = "".join(map(str, combined_list))
+
+print(hard_password)
