@@ -16,13 +16,13 @@ nr_symbols = int(input("How many symbols would you like in your password?\n"))
 """ easy_password = ""
 
 for letter in range(0, nr_letters):
-  easy_password += random.choice(letters)
+	easy_password += random.choice(letters)
 
 for number in range(0, nr_numbers):
-  easy_password += random.choice(numbers)
+	easy_password += random.choice(numbers)
 
 for symbol in range(0, nr_symbols):
-  easy_password += random.choice(symbols)
+	easy_password += random.choice(symbols)
 
 print(easy_password) """
 
@@ -32,11 +32,11 @@ selected_numbers = []
 selected_symbols = []
 
 for char in range(0, nr_letters):
-  selected_letters += random.choice(letters)
+	selected_letters += random.choice(letters)
 for char in range(0, nr_numbers):
-  selected_letters += random.choice(numbers)
+	selected_letters += random.choice(numbers)
 for char in range(0, nr_symbols):
-  selected_letters += random.choice(symbols)
+	selected_letters += random.choice(symbols)
 
 combined_list = selected_letters + selected_numbers + selected_symbols
 random.shuffle(combined_list)
